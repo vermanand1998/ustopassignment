@@ -17,21 +17,21 @@
     <!-- Custom CSS -->
     <!-- <link rel="stylesheet" href="css/styles.css"> -->
   </head>
-  <body>
+  <body [ngClass]="isMobile ? 'mobile-layout' : 'desktop-layout'">
+    <header fxShow.xs="true" fxHide class="header">
+      <div style="font-size: 20px; font-weight: bold;" class="menu-icon" (click)="openSidebar()">
+        <span style="font-size: 30px;color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;" class="material-icons-outlined">menu</span>{{this.selectedValue}}
+      </div>
+      <div>
+        <span class="material-icons-outlined">laptop_mac</span>
+      </div>
+    </header>
     <div  class="grid-container">
       <!-- Header -->
-      <header fxShow.xs="true" fxHide class="header">
-        <div class="menu-icon" (click)="openSidebar()">
-          <span class="material-icons-outlined">menu</span> Assessment
-        </div>
-        <div>
-          <span class="material-icons-outlined">laptop_mac</span>
-        </div>
-      </header>
       <!-- End Header -->
 
       <!-- Sidebar -->
-      <aside id="sidebar" class="sidebar" style="position: fixed;position: relative;">
+      <aside id="sidebar" class="sidebar positionText" style="position: fixed;position: relative;">
         <div fxShow.xs="true" fxHide class="sidebar-title">
           <div >
             <!-- <span class="material-icons-outlined">mood</span> LOGO -->
@@ -41,30 +41,36 @@
         </div>
 
         <ul fxShow.xs="true" fxHide class="sidebar-list">
-          <li (click)="navigateToOtherComponent('Dashboard',1)" class="sidebar-list-item">
-            <a >
+          <li [class.active]="activeStates[0]" (click)="navigateToOtherComponent('Dashboard',1)" class="sidebar-list-item">
+            <a>
               <span class="material-icons-outlined">dashboard</span>
+              <span class="menu-item-text">Dashboard</span>
             </a>
           </li>
-          <li (click)="navigateToOtherComponent('assessment',2)" class="sidebar-list-item">
-            <a >
-              <span class="material-icons-outlined">note_alt</span> Assessment
-            </a>
-          </li>
-          <li (click)="navigateToOtherComponent('libr',3)" class="sidebar-list-item">
+          <li [class.active]="activeStates[1]" (click)="navigateToOtherComponent('assessment',2)" class="sidebar-list-item">
             <a>
-              <span class="material-icons-outlined">library_books</span> My Library
+              <span class="material-icons-outlined">note_alt</span>
+              <span class="menu-item-text">Assessment</span>
             </a>
           </li>
-          <li (click)="navigateToOtherComponent('status',4)" class="sidebar-list-item">
+          <li [class.active]="activeStates[2]" (click)="navigateToOtherComponent('libr',3)" class="sidebar-list-item">
             <a>
-              <span class="material-icons-outlined">smartphone</span> Round Status
+              <span class="material-icons-outlined">library_books</span>
+              <span class="menu-item-text">My Library</span>
             </a>
           </li>
+          <li [class.active]="activeStates[3]" (click)="navigateToOtherComponent('status',4)" class="sidebar-list-item">
+            <a>
+              <span class="material-icons-outlined">smartphone</span>
+              <span class="menu-item-text">Round Status</span>
+            </a>
+          </li>
+          <!-- Add more menu items using the same structure -->
         </ul>
+        
 
         <!-- Desktop -->
-        <ul class="sidebar-list">
+        <ul fxHide.xs="true" class="sidebar-list">
           <a>
             <div
               class="sidebar-list-item"

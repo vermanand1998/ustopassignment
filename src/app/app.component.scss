@@ -61,3 +61,53 @@
     overflow-y: auto; /* Enable scrolling if content overflows */
   }
   
+  @media screen and (max-width: 576px) {
+    .main-content {
+      grid-area: main-content;
+      padding: 0px;
+      overflow-y: auto; /* Enable scrolling if content overflows */
+    }
+    .positionText{
+      position: absolute !important;
+    }
+    .sidebar-list-item{
+      align-items: start !important;
+      padding: 10px 20px !important;
+    }
+    .sidebar-title {
+      padding: 20px 0px 20px 0px;
+    }
+  }
+ /* Your existing styles */
+
+/* Style for sidebar menu items */
+.sidebar-list-item {
+  list-style: none;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+/* On hover, change background color */
+.sidebar-list-item:hover {
+  background-color: #f0f0f0; /* Change to your preferred hover color */
+}
+
+/* Active style for selected menu item */
+.sidebar-list-item.active {
+  background-color: #f0f0f0; /* Change to your preferred active color */
+}
+
+/* Style for icons */
+.material-icons-outlined {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Style for menu item text */
+.menu-item-text {
+  font-size: 16px;
+  font-weight: 500;
+}

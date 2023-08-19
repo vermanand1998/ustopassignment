@@ -10,7 +10,7 @@
               Total Assessment
             </div>
             <div class="icon-container">
-                <span style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;" class="material-icons-outlined">library_books</span>
+                <span style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;" class="material-icons-outlined iconNew">library_books</span>
               <div class="count">34</div>
             </div>
           </div>
@@ -22,7 +22,7 @@
             </div>
             <div style="display: flex; flex-direction: row;margin-top: -15px;">
             <div class="icon-container">
-              <span style="color: blueviolet; background-color: aliceblue; padding: 10px; border-radius: 10px;" class="material-icons-outlined">group</span>
+              <span style="color: blueviolet; background-color: aliceblue; padding: 10px; border-radius: 10px;" class="material-icons-outlined iconNew">group</span>
               <div class="count">11,145<span style="color: green; font-size: 13px;margin-left: 5px;">+89</span><p style="font-size: 12px;margin-top: 0px;color: #808080;">Total Candidates</p></div>
             </div>
             <div class="vertical-line"></div>
@@ -39,7 +39,7 @@
             </div>
             <div style="display: flex; flex-direction: row;margin-top: -15px;">
             <div class="icon-container">
-              <span style="color: rgb(210, 21, 21); background-color: rgb(241, 234, 234); padding: 10px; border-radius: 10px;" class="material-icons-outlined">language</span>
+              <span style="color: rgb(210, 21, 21); background-color: rgb(241, 234, 234); padding: 10px; border-radius: 10px;" class="material-icons-outlined iconNew">language</span>
               <div class="count">11,000<span style="color: green; font-size: 13px;margin-left: 5px;">+89</span><p style="font-size: 12px;margin-top: 0px;color: #808080;">E-Mail</p></div>
             </div>
             <div class="vertical-line"></div>
@@ -59,7 +59,7 @@
               Total Purpose
             </div>
             <div class="icon-container">
-                <span style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;" class="material-icons-outlined">attachment</span>
+                <span style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;" class="material-icons-outlined iconNew">attachment</span>
               <div class="count">11</div>
             </div>
           </div>
@@ -68,7 +68,7 @@
 
   <h3 class="text">My Assessment</h3>
   <div style="display: flex; flex-direction: row;flex-wrap: wrap;">
-    <div class="space" fxFlex="33.5">
+    <div class="space" fxFlex="33.5" fxFlex.xs="90">
         <div class="container1"  (click)="addAssessment()">
             <div class="dotted-border">
               <div class="plus-icon">
@@ -80,24 +80,25 @@
           </div>
     </div>
     
-    <div style="margin-left: 20px;" *ngFor="let obj of dummyArray" class="space" fxFlex="32">
+    <div style="margin-left: 20px;" *ngFor="let obj of dummyArray" class="space" fxFlex="32" fxFlex.xs="90">
       <div class="container2">
         <span class="material-icons-outlined top-left-icon" style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;">mail_lock</span>
         <span class="material-icons-outlined top-right-icon">more_vert</span>
         <div style="margin-top: 14%;">
             <h4 style="font-size: 18px;
-            margin-bottom: 10px;">{{obj.AssessmentName}}</h4>
-            <span style="margin-top: 0px;"><span style="color: rgb(101, 96, 96);font-weight:600;">{{obj.title}} </span><span>| </span><span class="material-icons-outlined" style="font-size: 19px;">calendar_month</span><span>{{obj.date}}</span></span>
-            <p style="margin-top:0px;color: rgb(221, 216, 209);">---------------------------------------------------------------------------</p>
+            margin-bottom: 10px;" class="fontSize">{{obj.AssessmentName}}</h4>
+            <span style="margin-top: 0px;"><span style="color: rgb(101, 96, 96);font-weight:600;" class="fontSize">{{obj.title}} </span><span>| </span><span class="material-icons-outlined" style="font-size: 19px;">calendar_month</span><span class="fontSize">{{obj.date}}</span></span>
+            <p fxShow="true" fxHide.xs="true" style="margin-top:0px;color: rgb(221, 216, 209);">---------------------------------------------------------------------------</p>
+            <p  fxShow.xs="true" fxHide="true"  style="margin-top:0px;color: rgb(221, 216, 209);">--------------------------------------------------------------</p>
             <div class="containerNew">
                 <div class="containerNew">
                 <div style="margin-top: -20px;margin-right: 10px;color: rgb(101, 96, 96);font-weight:600;" class="content bottom-left">
-                  <p>{{obj.time}}</p>
-                  <p style="margin-top: -20px;font-size: 14px;">Duration</p>
+                  <p class="fontSize">{{obj.time}}</p>
+                  <p style="margin-top: -20px;font-size: 14px;" class="fontSize">Duration</p>
                 </div>
                 <div style="margin-top: -20px;color: rgb(101, 96, 96);font-weight:600;" class="content bottom-left">
                     <p>{{obj.question}}</p>
-                    <p style="margin-top: -20px;font-size: 14px;">Questions</p>
+                    <p style="margin-top: -20px;font-size: 14px;" class="fontSize">Questions</p>
                 </div>
             </div>
             <div class="containerNew">
@@ -131,7 +132,7 @@
         <div class="form-container">
             <form>
               <div class="assessment-header">
-                <h2>Create New Assessment</h2>
+                <h2 class="new">Create New Assessment</h2>
                 <span (click)="close()" class="close-icon">
                   <span class="material-icons-outlined">close</span>
                 </span>
