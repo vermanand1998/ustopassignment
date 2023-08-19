@@ -1,0 +1,181 @@
+<div *ngIf="loading" class="thank-you-container">
+  <img src="assets/giphyloading.gif" alt="Loading..." class="thank-you-gif">
+</div>
+<div *ngIf="!loading">
+<h3 class="text">Assessment Overview</h3>
+<div class="container">
+    <div class="box box1" fxFlex="15%" fxFlex.xs="100%">
+        <div class="box-content">
+            <div class="title">
+              Total Assessment
+            </div>
+            <div class="icon-container">
+                <span style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;" class="material-icons-outlined">library_books</span>
+              <div class="count">34</div>
+            </div>
+          </div>
+    </div>
+    <div class="box box2" fxFlex="30%" fxFlex.xs="100%">
+        <div class="box-content">
+            <div class="title">
+              Candidates
+            </div>
+            <div style="display: flex; flex-direction: row;margin-top: -15px;">
+            <div class="icon-container">
+              <span style="color: blueviolet; background-color: aliceblue; padding: 10px; border-radius: 10px;" class="material-icons-outlined">group</span>
+              <div class="count">11,145<span style="color: green; font-size: 13px;margin-left: 5px;">+89</span><p style="font-size: 12px;margin-top: 0px;color: #808080;">Total Candidates</p></div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="icon-container">
+                <div class="count">1,14<span style="color: green; font-size: 13px;margin-left: 5px;">+89</span><p style="font-size: 12px;margin-top: 0px;color: #808080;">Who Attempted</p></div>
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="box box3" fxFlex="40%" fxFlex.xs="100%">
+        <div class="box-content">
+            <div class="title">
+              Candidates Source
+            </div>
+            <div style="display: flex; flex-direction: row;margin-top: -15px;">
+            <div class="icon-container">
+              <span style="color: rgb(210, 21, 21); background-color: rgb(241, 234, 234); padding: 10px; border-radius: 10px;" class="material-icons-outlined">language</span>
+              <div class="count">11,000<span style="color: green; font-size: 13px;margin-left: 5px;">+89</span><p style="font-size: 12px;margin-top: 0px;color: #808080;">E-Mail</p></div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="icon-container">
+                <div class="count">145<span style="color: green; font-size: 13px;margin-left: 5px;">+89</span><p style="font-size: 12px;margin-top: 0px;color: #808080;">Social Share</p></div>
+              </div>
+              <div class="vertical-line"></div>
+              <div class="icon-container">
+                  <div class="count">145<span style="color: green; font-size: 13px;margin-left: 5px;">+89</span><p style="font-size: 12px;margin-top: 0px;color: #808080;">Unique Link</p></div>
+                </div>
+          </div>
+        </div>
+    </div>
+    <div class="box box4" fxFlex="15%" fxFlex.xs="100%">
+        <div class="box-content">
+            <div class="title">
+              Total Purpose
+            </div>
+            <div class="icon-container">
+                <span style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;" class="material-icons-outlined">attachment</span>
+              <div class="count">11</div>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <h3 class="text">My Assessment</h3>
+  <div style="display: flex; flex-direction: row;flex-wrap: wrap;">
+    <div class="space" fxFlex="33.5">
+        <div class="container1"  (click)="addAssessment()">
+            <div class="dotted-border">
+              <div class="plus-icon">
+                <span class="material-icons-outlined add">add</span>
+              </div>
+              <h3>New Assessment</h3>
+              <p class="textme">From here you can add questions of multiple types like MCQs,Subjective (text or Paragraph)</p>
+            </div>
+          </div>
+    </div>
+    
+    <div style="margin-left: 20px;" *ngFor="let obj of dummyArray" class="space" fxFlex="32">
+      <div class="container2">
+        <span class="material-icons-outlined top-left-icon" style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;">mail_lock</span>
+        <span class="material-icons-outlined top-right-icon">more_vert</span>
+        <div style="margin-top: 14%;">
+            <h4 style="font-size: 18px;
+            margin-bottom: 10px;">{{obj.AssessmentName}}</h4>
+            <span style="margin-top: 0px;"><span style="color: rgb(101, 96, 96);font-weight:600;">{{obj.title}} </span><span>| </span><span class="material-icons-outlined" style="font-size: 19px;">calendar_month</span><span>{{obj.date}}</span></span>
+            <p style="margin-top:0px;color: rgb(221, 216, 209);">---------------------------------------------------------------------------</p>
+            <div class="containerNew">
+                <div class="containerNew">
+                <div style="margin-top: -20px;margin-right: 10px;color: rgb(101, 96, 96);font-weight:600;" class="content bottom-left">
+                  <p>{{obj.time}}</p>
+                  <p style="margin-top: -20px;font-size: 14px;">Duration</p>
+                </div>
+                <div style="margin-top: -20px;color: rgb(101, 96, 96);font-weight:600;" class="content bottom-left">
+                    <p>{{obj.question}}</p>
+                    <p style="margin-top: -20px;font-size: 14px;">Questions</p>
+                </div>
+            </div>
+            <div class="containerNew">
+                <div class="content bottom-right">
+                    <span style="
+                      display: inline-block;
+                      color: #3366cc;
+                      border: 2px solid #3366cc;
+                      border-radius: 30px;
+                      font-size: 10px;
+                      padding: 6px;
+                      margin-right: 5px;
+                      text-align: center;
+                      margin-bottom: 9px;
+                    ">
+                      <span class="material-icons-outlined" style="vertical-align: middle; font-size: 18px; margin-right: 5px;">send</span>
+                      <b style="font-size: 14px;; padding: 5px; vertical-align: middle;">Share</b>
+                    </span>
+                  </div>
+                <!-- -----------------1----------------- -->
+                <div *ngFor="let i of obj.value" class="content bottom-right" [style.border]="'1px solid ' + i.color" [style.background-color]="i.color" style="border-radius: 30px; height: 30px; width: 30px; text-align: center;margin-right: -15px;">
+                    <span style="color: white; line-height: 30px;">{{ i.person }}</span>
+                  </div>                  
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="openDialog" style="z-index: 1;">
+        <div class="form-container">
+            <form>
+              <div class="assessment-header">
+                <h2>Create New Assessment</h2>
+                <span (click)="close()" class="close-icon">
+                  <span class="material-icons-outlined">close</span>
+                </span>
+              </div>
+              <hr style="width: 100%;height: 1px;background-color: antiquewhite;">
+              <div class="form-group">
+                <label for="skill">Name of Assessment</label>
+                <input type="text" id="skill" name="skill" placeholder="Type here" required>
+              </div>
+              <div class="form-group">
+                <label for="stype">Purpose of the test is</label>
+                <select id="stype" name="stype">
+                  <option value="type1">Select</option>
+                  <option value="type2">Type 1</option>
+                  <option value="type3">Type 2</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="stype">Discription</label>
+                <select id="stype" name="stype">
+                  <option value="type1">Select</option>
+                  <option value="type2">Type 1</option>
+                  <option value="type3">Type 2</option>
+                </select>
+              </div>
+              <div style="margin-bottom: 15px;
+              border: 1px solid rgb(194, 187, 187);
+              border-radius: 13px;
+              padding: 6px;" class="form-group skill-form-container">
+                <label for="stype">Skills</label>
+                <div style="overflow-y: scroll;height: 100px;" class="selected-skills">
+                  <div class="skill-tag" *ngFor="let skill of selectedSkillsStatic">{{ skill }} <span>×</span></div>
+                  <div class="skill-tag" *ngFor="let skill of selectedSkills">{{ skill }} <span (click)="removeSkill(skill)">×</span></div>
+                </div>
+                <input type="text" id="skill" placeholder="Type here" name="skill" [(ngModel)]="newSkill" (keydown.enter)="addSkill()">
+              </div>              
+              <div class="form-group">
+                <label for="skill">Duration of Assessment</label>
+                <input type="text" id="skill" name="skill" placeholder="HH:MM:SS" required>
+              </div>
+              <button [disabled]="true" style="width: 100%;" type="submit">Submit</button>
+            </form>
+          </div>
+    </div>
+</div>
+  
+   

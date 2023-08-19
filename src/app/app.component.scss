@@ -1,0 +1,63 @@
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    margin: 5px;
+    transition: background-color 0.3s, border-color 0.3s; /* Add smooth transition */
+  
+    &:hover {
+      background-color: rgba(0, 0, 255, 0.1);
+    }
+  
+    &.active {
+      border-color: #0066cc;
+      background-color: #e6faff;
+      color: #0066cc;
+    }
+  
+    .material-icons-outlined {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+  }
+  p{
+    font-size: 13px;
+  }
+  
+  /* Set up the grid layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Sidebar and Main Content */
+    grid-template-rows: auto;
+    grid-template-areas: "sidebar main-content";
+    height: 99vh; /* Make the grid container take up the full viewport height */
+  }
+  
+  /* Styling for the fixed sidebar */
+  .sidebar {
+    grid-area: sidebar;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background-color: #f1f1f1;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+  }
+  
+  /* Styling for the main content area */
+  .main-content {
+    grid-area: main-content;
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+  }
+  

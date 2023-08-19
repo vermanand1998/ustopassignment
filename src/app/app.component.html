@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Open Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  </head>
+  <body>
+    <div  class="grid-container">
+      <!-- Header -->
+      <header fxShow.xs="true" fxHide class="header">
+        <div class="menu-icon" (click)="openSidebar()">
+          <span class="material-icons-outlined">menu</span> Assessment
+        </div>
+        <div>
+          <span class="material-icons-outlined">laptop_mac</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar" style="position: fixed;position: relative;">
+        <div fxShow.xs="true" fxHide class="sidebar-title">
+          <div >
+            <!-- <span class="material-icons-outlined">mood</span> LOGO -->
+            <span>Menu</span>
+          </div>
+          <span class="material-icons-outlined" (click)="closeSidebar()">close</span>
+        </div>
+
+        <ul fxShow.xs="true" fxHide class="sidebar-list">
+          <li (click)="navigateToOtherComponent('Dashboard',1)" class="sidebar-list-item">
+            <a >
+              <span class="material-icons-outlined">dashboard</span>
+            </a>
+          </li>
+          <li (click)="navigateToOtherComponent('assessment',2)" class="sidebar-list-item">
+            <a >
+              <span class="material-icons-outlined">note_alt</span> Assessment
+            </a>
+          </li>
+          <li (click)="navigateToOtherComponent('libr',3)" class="sidebar-list-item">
+            <a>
+              <span class="material-icons-outlined">library_books</span> My Library
+            </a>
+          </li>
+          <li (click)="navigateToOtherComponent('status',4)" class="sidebar-list-item">
+            <a>
+              <span class="material-icons-outlined">smartphone</span> Round Status
+            </a>
+          </li>
+        </ul>
+
+        <!-- Desktop -->
+        <ul class="sidebar-list">
+          <a>
+            <div
+              class="sidebar-list-item"
+              [class.active]="activeStates[0]"
+              (click)="navigateToOtherComponent('Dashboard',1)"
+            >
+              <span class="material-icons-outlined">dashboard</span>
+              <p>Dashboard</p>
+            </div>
+          </a>
+          <!-- <br> -->
+          <a>
+            <div
+              class="sidebar-list-item"
+              [class.active]="activeStates[1]"
+              (click)="navigateToOtherComponent('assessment',2)"
+            >
+              <span class="material-icons-outlined">note_alt</span>
+              <p>Assessment</p>
+            </div>
+          </a>
+         <!-- <br> -->
+         <a>
+          <div
+            class="sidebar-list-item"
+            [class.active]="activeStates[2]"
+            (click)="navigateToOtherComponent('libr',3)"
+          >
+            <span class="material-icons-outlined">library_books</span>
+            <p>My Library</p>
+          </div>
+        </a>
+        <span style="color: rgb(169, 160, 160);padding: 10px;margin-bottom: 5px;">.........................</span>
+        <!-- <br> -->
+        <a>
+          <div
+            class="sidebar-list-item"
+            [class.active]="activeStates[3]"
+            (click)="navigateToOtherComponent('status',4)"
+          > <span style="
+          color: red;
+          border: 2px solid red;
+          border-radius: 30px;
+          font-size: 10px;
+          padding: 2px;
+          width: 55px;
+          text-align: center;
+          margin-bottom: 9px;
+      "><b>Admin</b></span>
+            <span class="material-icons-outlined">smartphone</span>
+            <p>Round Status</p>
+          </div>
+        </a>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+      <main class="main-content">
+      <router-outlet></router-outlet>
+      </main>
+    </div>
+  </body>
+</html>
+<!-- <app-top-nav></app-top-nav> -->
+<!-- <app-side-nav></app-side-nav> -->

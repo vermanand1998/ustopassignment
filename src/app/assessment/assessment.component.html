@@ -1,0 +1,21 @@
+<div style="background-color: white;padding-bottom: 5%; margin-top: 5px;border-radius: 30px;">
+<div class="tab-buttons">
+  <button class="tab-button" [class.active]="selectedTab === 'assessment'" (click)="showAssessment()">Assessment</button>
+  <div class="vertical-line"></div>
+  <button class="tab-button" [class.active]="selectedTab === 'my-assessment'" (click)="showMyAssessment()">My Assessment</button>
+</div>
+
+<div class="content-container">
+  <ng-container *ngIf="selectedTab === 'assessment'">
+    <app-assessment-only></app-assessment-only>
+  </ng-container>
+  <ng-container *ngIf="selectedTab === 'my-assessment'">
+    <app-assessment-my></app-assessment-my>
+  </ng-container>
+</div>
+</div>
+
+
+
+
+
