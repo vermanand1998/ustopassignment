@@ -21,7 +21,7 @@
               Total Purpose
             </div>
             <div class="icon-container">
-                <span style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;" class="material-icons-outlined iconNew">library_books</span>
+                <span style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 10px;" class="material-icons-outlined iconNew">attachment</span>
               <div class="count countBox1">11</div>
             </div>
           </div>
@@ -36,7 +36,8 @@
               <span style="color: blueviolet; background-color: aliceblue; padding: 10px; border-radius: 10px;" class="material-icons-outlined iconNew">group</span>
               <div class="count">11,145<span style="color: green; font-size: 13px;margin-left: 5px;">+89</span><p style="font-size: 12px;margin-top: 0px;color: #808080;" [ngStyle.xs]="{'font-size': '9px'}">Total Candidates</p></div>
             </div>
-            <div class="vertical-line"></div>
+            <div fxHide.xs="true" fxShow="true" class="vertical-line"></div>
+            <div fxHide="true" fxShow.xs="true" class="vertical-line-new"></div>
             <div class="icon-container">
                 <div class="count">1,14<span style="color: green; font-size: 13px;margin-left: 5px;">+89</span><p style="font-size: 12px;margin-top: 0px;color: #808080;" [ngStyle.xs]="{'font-size': '9px'}">Who Attempted</p></div>
               </div>
@@ -78,7 +79,7 @@
 </div>
 </div>
 
-  <h3 class="text">My Assessment<span fxShow.xs="true" fxHide="true" style="padding: 10px;border-radius: 10px;margin-left: 25%;" class="material-icons-outlined">search</span><span fxShow.xs="true" fxHide="true" style="padding: 10px;border-radius: 10px;" class="material-icons-outlined">filter_alt</span><span fxShow.xs="true" fxHide="true" style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 50px;" class="material-icons-outlined" (click)="toggleDiv()">signal_cellular_alt</span></h3>
+  <h3 class="text">My Assessment<span fxShow.xs="true" fxHide="true" style="padding: 10px;border-radius: 10px;margin-left: 21%;" class="material-icons-outlined">search</span><span fxShow.xs="true" fxHide="true" style="padding: 10px;border-radius: 10px;" class="material-icons-outlined">filter_alt</span><span fxShow.xs="true" fxHide="true" style="color: blueviolet;background-color: aliceblue;padding: 10px;border-radius: 50px;" class="material-icons-outlined" (click)="toggleDiv()">signal_cellular_alt</span></h3>
   <div style="display: flex; flex-direction: row;flex-wrap: wrap;">
     <div class="space" fxFlex="33.5" fxFlex.xs="90">
         <div class="container1"  (click)="addAssessment()">
