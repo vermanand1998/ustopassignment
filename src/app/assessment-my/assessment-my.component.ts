@@ -170,13 +170,19 @@ export class AssessmentMyComponent {
 ];
 loading: boolean = true;
 openDialog=false;
+isOpen = false;
 constructor(private dialog: MatDialog,private modalService: NgbModal) {}
 ngOnInit(): void {
   setTimeout(() => {
     this.loading = false;
   }, 5000); // 5000 milliseconds = 5 seconds
   this.openDialog=false;
+  this.isOpen=true;
 }
+
+  toggleDiv() {
+    this.isOpen = !this.isOpen;
+  }
   addAssessment(){
     this.openDialog=true;
   }
