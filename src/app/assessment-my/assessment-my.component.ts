@@ -46,8 +46,7 @@ export class AssessmentMyComponent {
             { person: 'LM', color: '#66cc66' },
             { person: 'HG', color: '#ff66cc' },
             { person: 'SO', color: '#3399ff' },
-            { person: 'PM', color: '#ff3366' },
-            { person: 'LM', color: '#99ccff' }
+            { person: 'PM', color: '#ff3366' }
         ]
     },
     {
