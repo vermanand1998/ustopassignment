@@ -21,8 +21,8 @@ export class AppComponent {
    }
 
   ngOnInit(): void {
-    this.selectedValue="Assessment";
-    this.navigateToOtherComponent('assessment',2);
+    this.selectedValue="Dashboard";
+    this.navigateToOtherComponent('dashboard',1);
   }
 
   ngOnDestroy() {

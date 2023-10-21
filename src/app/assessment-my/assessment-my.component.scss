@@ -1,345 +1,93 @@
-/* responsive-design.component.css */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-    // border: 1px solid #ccc;
-  }
-  .containerNew {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    // padding-left: 20px;
-    // padding-right: 20px;
-    // border: 1px solid #ccc;
-    margin-right: 8px;
-  }
-  .text{
-    padding-left: 20px;
-  }
-  
-  .box {
-    padding: 20px;
-    // text-align: center;
-    color: #fff;
-  }
-  
-  .box1 {
-    border: 1px solid #ebe5e5;
-    border-radius: 10px 0px 0px 10px;
-  }
-  
-  .box2 {
-    border: 1px solid #ebe5e5;
-  }
-  
-  .box3 {
-    border: 1px solid #ebe5e5;
-  }
-  
-  .box4 {
-    border: 1px solid #ebe5e5;
-    border-radius: 0px 10px 10px 0px;
-  }
-  .box-content {
-    display: flex;
-    flex-direction: column;
-    // align-items: center;
-  }
-  
-  .title {
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #808080; /* Black text color */
-    font-weight: bold;
-    margin-bottom: 20px;
-    // align-items:flex-start;
-  }
-  
-  .icon-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .icon {
-    font-size: 24px;
-    margin-right: 8px;
-    color: #000; /* Black icon color */
-  }
-  
-  .count {
-    font-size: 25px;
-    font-weight: bold;
-    color: #000;
-    margin-left: 15px;
-  }
-  .vertical-line-mob{
-    width: 1px;
-    height: 122px;
-    background-color: #e0e0e0;
-    /* margin: 0 10px; */
-    margin-top: -20px;
-    margin-bottom: -58px;
-    /* margin-bottom: 4px; */
-    margin-right: 50px;
-    margin-left: 40px;
-  }
-  .vertical-line {
-    width: 1px;
-    height: 50px;
-    background-color: #e0e0e0;
-    margin: 0 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  .vertical-line-new{
-    width: 1px;
-    height: 50px;
-    background-color: #e0e0e0;
-    margin: 0 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-  .container1 {
-    position: relative;
-    height: 73%;
-    width: 86%;
-    padding: 20px;
-    cursor: pointer;
-  }
-  
-  .container2 {
-    border: 1px solid #aaa;
-    padding: 10px;
-    // text-align: center;
-    // max-width: 340px;
-    margin-top: 23px;
-    height: 80%;
-    border-radius: 15px;
-    position: relative;
-    
-  }
-  
-  .container2 h3 {
-    font-size: 18px;
-    margin: 0;
-    color: #333;
-  }
-  
-  .dotted-border {
-    border: 2px dotted #aaa;
-    padding: 20px;
-    text-align: center;
-    height: 100%;
-    width: 99.5%;
-    border-radius: 15px;
-    background-color: #f0f4f5;
-  }
-  
-  .plus-icon {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .text {
-    font-size: 18px;
-    color: #2e2c2c;
-  }
-  .add{
-    font-size: 55px;
-    background-color: white;
-    border-radius: 50px;
-    color: #3366cc;
-    background-color: white;padding: 10px;
-  }
-.textme{
-    font-size: 13px;
-    margin-top: -15px;
+
+.custom-card-data{
+  width: 97%;
+  background: linear-gradient(45deg, #ff9900, #ff5b5b); /* Background gradient */
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  margin-top: 2%;
+  height: 100%;
+  margin-bottom: 40px;
 }
-.space{
-    margin-right: -12px;
+// .custom-card:hover {
+//   transform: scale(0.5.05); /* Enlarge on hover */
+// }
+
+
+mat-card-image {
+  flex: 1; /* Make the image take up 1/3 of the card width */
+  max-width: 200px; /* Limit the image width */
+  padding: 20px;
 }
-.top-left-icon {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    margin: 10px;
-  }
-  
-  .top-right-icon {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    margin: 10px;
-  }
-  .top-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 10px; /* Add margin to create space between icons and title */
-  }
-  .custom-dialog {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Set the dialog container height to cover the entire viewport */
-  }
-  .form-container {
-    width: 50%;
-    margin-left: 30%;
-    height: 90vh;
-    margin-top: -219vh;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 10px 10px 36px 0 rgba(100, 40, 50, 0.3);
-  }
-  .form-group {
-    margin-bottom: 15px;
-  }
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  input[type="text"],
-  select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-  }
-  button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  .close-button {
-    background-color: #ccc;
-  }
 
+.card-details {
+  flex: 2; /* Make the details take up 2/3 of the card width */
+  padding: 20px;
+}
 
-  .assessment-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .assessment-header h2 {
-    margin: 0;
-  }
-  
-  .close-icon {
-    cursor: pointer;
-  }
-  
-  .close-icon span {
-    font-size: 24px;
-  }
-  
-  .selected-skills {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-  }
-  
-  .skill-tag {
-    display: inline-block;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 4px 8px;
-    margin: 4px;
-  }
-  
-  .skill-tag span {
-    cursor: pointer;
-    margin-left: 4px;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  @media screen and (max-width: 576px) {
-    .space{
-      margin-top: -16px !important;
-    }
-    .add{
-      font-size: 35px !important;
-    }
-    .dotted-border{
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
 
-   height: 80% !important;
-    }
-    .top-left-icon{
-      font-size: 28px;
-    }
-    .container2{
-    border: 1px solid #aaa;
-    padding: 10px;
-    margin-top: 23px;
-    height: 70%;
-    border-radius: 15px;
-    position: relative;
-    }
-    .vertical-line {
-      width: 1px;
-    height: 50px;
-    background-color: #e0e0e0;
-    margin: 0 3px;
-    margin-top: 10px;
-    }
-    .box1{
-      border-radius: 10px 10px 0px 0px !important;
-    }
-    .box3{
-      border-radius: 0px 0px 10px 10px !important;
-    }
-    .iconNew{
-      font-size: 30px !important;
-    margin-top: -5px;
-    margin-right: 10px;
-    }
-    .text{
-      font-size: 15px !important;
-    }
-    .title{
-      font-size: 11px !important;
-    }
-    .count{
-      font-size:18px !important;
-      margin-left: 0px !important;
-    }
-    .form-container {
-    width: 85%;
-    margin-left: 2%;
-    height: 84vh;
-    margin-top: -437vh;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 10px 10px 36px 0 rgba(100, 40, 50, 0.3);
-    }
-    .new{
-      font-size: 17px !important;
-    }
+.card-description {
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.custom-button {
+  background-color: #ff5b5b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #ff2f2f; /* Button color on hover */
+}
+
+.custom-card {
+  // display: flex;
+  flex-direction: column; /* Set flex direction to column */
+  width: 97%;
+  background: linear-gradient(45deg, #ff9900, #ff5b5b);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  margin-top: 2%; /* Adjust the margin to suit your design */
+  margin-bottom: 40px;
+}
+
+.card-content {
+  display: flex;
+  width: 100%;
+  flex: 1; /* Make the content expand to fill the available space */
+}
+
+iframe {
+  height: 1000px;
+  width: 96%;
+  /* margin-top: 20px; */
+  margin: 20px;
+}
+
+.thank-you-container-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 93vh;
+  background-color: white;
+  border-radius: 30px;
+}
+@media screen and (max-width: 576px) {
+  .thank-you-container-data {
+    border-radius: 0px;
   }
+}

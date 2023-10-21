@@ -1,21 +1,17 @@
-<div style="background-color: white;padding-bottom: 5%; margin-top: 5px;border-radius: 30px;" class="mobile">
-<div class="tab-buttons">
-  <button class="tab-button" [class.active]="selectedTab === 'assessment'" (click)="showAssessment()">Assessment</button>
-  <div class="vertical-line"></div>
-  <button class="tab-button" [class.active]="selectedTab === 'my-assessment'" (click)="showMyAssessment()">My Assessment</button>
+<div *ngIf="!loading" class="thank-you-container">
+  <!-- <img src="assets/giphy.gif" alt="Thank You GIF" class="thank-you-gif"> -->
+  <!-- <iframe style="height: 100%; width: 100%;" src="https://script.google.com/macros/s/AKfycbwL8CxAhj6osd87pt2bdkEoZcdFaWu-_jQti3XVkAZ-WfaJQpc7WKGVuW2Acvv2UESdeg/exec"></iframe> -->
+  <mat-card class="custom-card" class="card" *ngFor="let driver of drivers">
+    <img mat-card-image [src]="driver.imageUrl" alt="Driver Image">
+    <mat-card-content>
+      <h2>{{ driver.driverName }}</h2>
+      <p>{{ driver.driverDescription }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="onButtonClick(driver)">CABS Details</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
-
-<div class="content-container">
-  <ng-container *ngIf="selectedTab === 'assessment'">
-    <app-assessment-only></app-assessment-only>
-  </ng-container>
-  <ng-container *ngIf="selectedTab === 'my-assessment'">
-    <app-assessment-my></app-assessment-my>
-  </ng-container>
+<div *ngIf="loading" class="thank-you-container">
+<img src="assets/giphyloading.gif" alt="Loading..." class="thank-you-gif">
 </div>
-</div>
-
-
-
-
-
