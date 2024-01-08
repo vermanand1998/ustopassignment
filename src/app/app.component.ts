@@ -61,7 +61,7 @@ export class AppComponent {
       this.router.navigate(['/round-status']); // Replace 'target-route' with your actual route path
     }else if(key=="assessment"){
       this.selectedValue="Assessment"
-      this.router.navigate(['/assessment']); // Replace 'target-route' with your actual route path
+      this.router.navigate(['/assessment-my']); // Replace 'target-route' with your actual route path
     }
   }
 }
